@@ -37,7 +37,7 @@ public class AnaliseDocumento extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TAMotivoRecusa = new javax.swing.JTextArea();
+        TxtAMotivoRecusa = new javax.swing.JTextArea();
         btnRecusa = new javax.swing.JButton();
         btnAceite = new javax.swing.JButton();
 
@@ -53,9 +53,9 @@ public class AnaliseDocumento extends javax.swing.JDialog {
 
         jLabel5.setText("Motivação da recusa:");
 
-        TAMotivoRecusa.setColumns(20);
-        TAMotivoRecusa.setRows(5);
-        jScrollPane1.setViewportView(TAMotivoRecusa);
+        TxtAMotivoRecusa.setColumns(20);
+        TxtAMotivoRecusa.setRows(5);
+        jScrollPane1.setViewportView(TxtAMotivoRecusa);
 
         btnRecusa.setText("Recusar");
         btnRecusa.addActionListener(new java.awt.event.ActionListener() {
@@ -141,13 +141,13 @@ public class AnaliseDocumento extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAceiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceiteActionPerformed
-       BotaoActionListener aceite = new BotaoActionListener ();
+       BotaoAceiteActionListener aceite = new BotaoAceiteActionListener ();
         btnAceite.addActionListener((ActionListener) aceite);
     }//GEN-LAST:event_btnAceiteActionPerformed
 
     private void btnRecusaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecusaActionPerformed
-       BotaoActionListener recusa = new BotaoActionListener ();
-        btnRecusa.addActionListener(recusa);
+       BotaoRecusaActionListener recusa = new BotaoRecusaActionListener ();
+        btnRecusa.addActionListener((ActionListener) recusa);
     }//GEN-LAST:event_btnRecusaActionPerformed
 
     /**
@@ -193,7 +193,7 @@ public class AnaliseDocumento extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea TAMotivoRecusa;
+    private javax.swing.JTextArea TxtAMotivoRecusa;
     private javax.swing.JButton btnAceite;
     private javax.swing.JButton btnRecusa;
     private javax.swing.JLabel jLabel1;

@@ -6,14 +6,16 @@
 package br.iesb.meuprograma.apresentacao;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author kscka
  */
-public class BotaoRecusaActionListener {
+public class BotaoRecusaActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e) {
+        
         JOptionPane.showMessageDialog(null, "A justificativa da recusa foi salva.");
         }
 }

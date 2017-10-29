@@ -6,13 +6,14 @@
 package br.iesb.meuprograma.apresentacao;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author kscka
  */
-public class BotaoAceiteActionListener {
+public class BotaoAceiteActionListener implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         JOptionPane.showMessageDialog(null, "O documento foi aceito com sucesso!");
 }
