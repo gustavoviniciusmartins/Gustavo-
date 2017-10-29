@@ -62,6 +62,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         jMenuItemMeta.setMnemonic('M');
         jMenuItemMeta.setText("Meta");
+        jMenuItemMeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemMetaActionPerformed(evt);
+            }
+        });
         jMenuCadastro.add(jMenuItemMeta);
 
         jMenuBarPrincipal.add(jMenuCadastro);
@@ -129,7 +134,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDocumentoActionPerformed
-        // TODO add your handling code here:
+        NovoDoc dialog = new NovoDoc(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
 
     private void jMenuItemGerarRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerarRelActionPerformed
@@ -141,6 +147,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         AnaliseDocumento dialog = new AnaliseDocumento(new javax.swing.JFrame(), true);
         dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemAnaliseDocActionPerformed
+
+    private void jMenuItemMetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMetaActionPerformed
+        CadastroMeta dialog = new CadastroMeta(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItemMetaActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenuAjuda;

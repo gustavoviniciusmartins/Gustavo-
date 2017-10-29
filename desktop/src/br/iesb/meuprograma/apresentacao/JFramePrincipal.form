@@ -41,6 +41,9 @@
                 <Property name="mnemonic" type="int" value="77"/>
                 <Property name="text" type="java.lang.String" value="Meta"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemMetaActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
