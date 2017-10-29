@@ -23,6 +23,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuSistema = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
         jMenuCadastro = new javax.swing.JMenu();
+        jMenuItemDocumento = new javax.swing.JMenuItem();
+        jMenuItemMeta = new javax.swing.JMenuItem();
+        jMenuAnalise = new javax.swing.JMenu();
+        jMenuItemAnaliseDoc = new javax.swing.JMenuItem();
+        jMenuItemGerarRel = new javax.swing.JMenuItem();
         jMenuAjuda = new javax.swing.JMenu();
         jMenuItemSobre = new javax.swing.JMenuItem();
 
@@ -45,7 +50,44 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         jMenuCadastro.setMnemonic('C');
         jMenuCadastro.setText("Cadastro");
+
+        jMenuItemDocumento.setMnemonic('D');
+        jMenuItemDocumento.setText("Documento");
+        jMenuItemDocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemDocumentoActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItemDocumento);
+
+        jMenuItemMeta.setMnemonic('M');
+        jMenuItemMeta.setText("Meta");
+        jMenuCadastro.add(jMenuItemMeta);
+
         jMenuBarPrincipal.add(jMenuCadastro);
+
+        jMenuAnalise.setMnemonic('A');
+        jMenuAnalise.setText("Análise");
+
+        jMenuItemAnaliseDoc.setMnemonic('n');
+        jMenuItemAnaliseDoc.setText("Análise de Documento");
+        jMenuItemAnaliseDoc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAnaliseDocActionPerformed(evt);
+            }
+        });
+        jMenuAnalise.add(jMenuItemAnaliseDoc);
+
+        jMenuItemGerarRel.setMnemonic('G');
+        jMenuItemGerarRel.setText("Gerar Relatório");
+        jMenuItemGerarRel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemGerarRelActionPerformed(evt);
+            }
+        });
+        jMenuAnalise.add(jMenuItemGerarRel);
+
+        jMenuBarPrincipal.add(jMenuAnalise);
 
         jMenuAjuda.setMnemonic('j');
         jMenuAjuda.setText("Ajuda");
@@ -86,10 +128,29 @@ public class JFramePrincipal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
+    private void jMenuItemDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDocumentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
+
+    private void jMenuItemGerarRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerarRelActionPerformed
+        GerarRelatorio dialog = new GerarRelatorio(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItemGerarRelActionPerformed
+
+    private void jMenuItemAnaliseDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAnaliseDocActionPerformed
+        AnaliseDocumento dialog = new AnaliseDocumento(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItemAnaliseDocActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenuAjuda;
+    private javax.swing.JMenu jMenuAnalise;
     private javax.swing.JMenuBar jMenuBarPrincipal;
     private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenuItem jMenuItemAnaliseDoc;
+    private javax.swing.JMenuItem jMenuItemDocumento;
+    private javax.swing.JMenuItem jMenuItemGerarRel;
+    private javax.swing.JMenuItem jMenuItemMeta;
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenu jMenuSistema;

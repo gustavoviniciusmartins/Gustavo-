@@ -13,7 +13,9 @@ public class Principal {
                 JFramePrincipal jFramePrincipal = new JFramePrincipal();
                 jFramePrincipal.setVisible(true);
                 jFramePrincipal.setExtendedState(Frame.MAXIMIZED_BOTH);
-            }
+                jFramePrincipal.setSize(900,700);
+                jFramePrincipal.setLocationRelativeTo(null);
+                }
         });
     }
 }
