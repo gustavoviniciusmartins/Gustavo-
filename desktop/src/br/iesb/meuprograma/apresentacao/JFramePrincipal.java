@@ -52,7 +52,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuCadastro.setText("Cadastro");
 
         jMenuItemDocumento.setMnemonic('D');
-        jMenuItemDocumento.setText("Documento");
+        jMenuItemDocumento.setText("Novo Documento");
         jMenuItemDocumento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemDocumentoActionPerformed(evt);
@@ -61,7 +61,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuCadastro.add(jMenuItemDocumento);
 
         jMenuItemMeta.setMnemonic('M');
-        jMenuItemMeta.setText("Meta");
+        jMenuItemMeta.setText("Cadastro de Meta");
         jMenuItemMeta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemMetaActionPerformed(evt);
@@ -134,8 +134,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDocumentoActionPerformed
-        NovoDoc dialog = new NovoDoc(new javax.swing.JFrame(), true);
-        dialog.setVisible(true);
+        NovoDoc dialogo = new NovoDoc (this, true);
+        dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
 
     private void jMenuItemGerarRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerarRelActionPerformed
@@ -149,8 +149,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemAnaliseDocActionPerformed
 
     private void jMenuItemMetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMetaActionPerformed
-        CadastroMeta dialog = new CadastroMeta(new javax.swing.JFrame(), true);
-        dialog.setVisible(true);
+       CadastroMeta dialogo = new CadastroMeta (this, true);
+        dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItemMetaActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

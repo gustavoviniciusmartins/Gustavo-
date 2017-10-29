@@ -30,7 +30,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDocumento">
               <Properties>
                 <Property name="mnemonic" type="int" value="68"/>
-                <Property name="text" type="java.lang.String" value="Documento"/>
+                <Property name="text" type="java.lang.String" value="Novo Documento"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDocumentoActionPerformed"/>
@@ -39,7 +39,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemMeta">
               <Properties>
                 <Property name="mnemonic" type="int" value="77"/>
-                <Property name="text" type="java.lang.String" value="Meta"/>
+                <Property name="text" type="java.lang.String" value="Cadastro de Meta"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemMetaActionPerformed"/>
