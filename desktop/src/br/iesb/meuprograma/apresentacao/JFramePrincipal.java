@@ -134,7 +134,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDocumentoActionPerformed
-       
+        NovoDoc dialogo = new NovoDoc (this, true);
+       dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
 
     private void jMenuItemGerarRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerarRelActionPerformed
@@ -148,7 +149,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemAnaliseDocActionPerformed
 
     private void jMenuItemMetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMetaActionPerformed
-       
+       CadastroMeta dialogo = new CadastroMeta (this, true);
+       dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItemMetaActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
