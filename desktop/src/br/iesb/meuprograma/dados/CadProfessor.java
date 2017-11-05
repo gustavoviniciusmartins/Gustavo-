@@ -10,7 +10,7 @@ package br.iesb.meuprograma.dados;
  * @author kscka
  */
 public class CadProfessor {
-    private int matricula;
+    private int matricula; // não consegui encontrar uma maneira de utilizar como INT.
     private String nome;
     private String email;
     private String telefone;

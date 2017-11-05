@@ -16,7 +16,7 @@ public class CadProfessorBO implements BO<CadProfessor> {
 
     @Override
     public void validar(CadProfessor entidade) throws NegocioException {
-        if (entidade.equals(matricula.getMatricula()).isEmpty()){
+        if (entidade.getMatricula().isEmpty()){ //deu erro quando a entidade estava como INT.
         throw new NegocioException ("O campo Matrícula do professor é obrigatória.");
         }
         if (entidade.getNome().isEmpty()){
