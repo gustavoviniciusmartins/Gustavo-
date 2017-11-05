@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Vinicius/Documents/IESB/Projeto%20Integrador/eadtime6/desktop/src/br/iesb/meuprograma/dados/ConexaoBD.java</file>
-            <file>file:/D:/Vinicius/Documents/IESB/Projeto%20Integrador/eadtime6/desktop/src/br/iesb/meuprograma/dados/Documento.java</file>
-            <file>file:/D:/Vinicius/Documents/IESB/Projeto%20Integrador/eadtime6/desktop/src/br/iesb/meuprograma/dados/DocumentoDAO.java</file>
-            <file>file:/D:/Vinicius/Documents/IESB/Projeto%20Integrador/eadtime6/desktop/src/br/iesb/meuprograma/apresentacao/NovoDoc.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/apresentacao/JDialogCadastroProfessor.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/dados/DAO.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/negocio/CadProfessorBO.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/dados/ConexaoBD.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/dados/CadProfessor.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/dados/CadProfessorDAO.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/negocio/BO.java</file>
         </group>
     </open-files>
 </project-private>
