@@ -27,8 +27,8 @@ public class DocumentoDAO implements DAO<Documento> {
             comando.setInt(1, entidade.getNumero());
             comando.setString(2, entidade.getNome());
             comando.setString(3, entidade.getTipo());
-            comando.setInt(3, entidade.getData());
-            comando.setString(3, entidade.getDescricao());
+            comando.setString(4, entidade.getData());
+            comando.setString(5, entidade.getDescricao());
             comando.executeUpdate();
             conexao.close();
             
@@ -47,8 +47,8 @@ public class DocumentoDAO implements DAO<Documento> {
             comando.setInt(1, entidade.getNumero());
             comando.setString(2, entidade.getNome());
             comando.setString(3, entidade.getTipo());
-            comando.setInt(3, entidade.getData());
-            comando.setString(3, entidade.getDescricao());
+            comando.setString(4, entidade.getData());
+            comando.setString(5, entidade.getDescricao());
             comando.executeUpdate();
             conexao.close();
             
@@ -87,7 +87,7 @@ public class DocumentoDAO implements DAO<Documento> {
                 documento.setNumero(resultado.getInt(1));
                 documento.setNome(resultado.getString(2));
                 documento.setTipo(resultado.getString(3));
-                documento.setData(resultado.getInt(4));
+                documento.setData(resultado.getString(4));
                 documento.setDescricao(resultado.getString(5));               
             }
             conexao.close();
@@ -111,7 +111,7 @@ public class DocumentoDAO implements DAO<Documento> {
                 documento.setNumero(resultado.getInt(1));
                 documento.setNome(resultado.getString(2));
                 documento.setTipo(resultado.getString(3));
-                documento.setData(resultado.getInt(4));
+                documento.setData(resultado.getString(4));
                 documento.setDescricao(resultado.getString(5));
                 lista.add(documento);
             }

@@ -134,7 +134,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDocumentoActionPerformed
-        NovoDoc dialogo = new NovoDoc (this, true);
+        JDialogDocumento dialogo = new JDialogDocumento (this, true);
        dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
 

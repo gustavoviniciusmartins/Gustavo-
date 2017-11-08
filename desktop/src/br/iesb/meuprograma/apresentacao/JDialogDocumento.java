@@ -5,16 +5,21 @@
  */
 package br.iesb.meuprograma.apresentacao;
 
+import br.iesb.meuprograma.dados.Documento;
+import br.iesb.meuprograma.negocio.DocumentoBO;
+import br.iesb.meuprograma.negocio.NegocioException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vimag
  */
-public class NovoDoc extends javax.swing.JDialog {
+public class JDialogDocumento extends javax.swing.JDialog {
 
     /**
      * Creates new form NovoDoc
      */
-    public NovoDoc(java.awt.Frame parent, boolean modal) {
+    public JDialogDocumento(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -35,17 +40,16 @@ public class NovoDoc extends javax.swing.JDialog {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         tfAssunto = new javax.swing.JTextField();
-        ftfData = new javax.swing.JFormattedTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         cbTipoDoc = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         taDescricao = new javax.swing.JTextArea();
+        tfData = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Novo Documento");
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jLabel1.setText("Número");
 
@@ -61,13 +65,21 @@ public class NovoDoc extends javax.swing.JDialog {
 
         tfAssunto.setPreferredSize(new java.awt.Dimension(600, 26));
 
-        ftfData.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
-
         jButton1.setText("Anexar");
 
-        jButton2.setText("Enviar");
+        jButton2.setText("Salvar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Cancelar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         cbTipoDoc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ATA", "Ato ", "Certificado", "Currículo", "Diploma", "Ementa", "Estatuto", "Formulário", "Guia", "Histórico ", "Lista", "Ofício", "Requerimento", "Título", " ", " " }));
         cbTipoDoc.setPreferredSize(new java.awt.Dimension(300, 26));
@@ -104,7 +116,7 @@ public class NovoDoc extends javax.swing.JDialog {
                             .addGap(200, 200, 200)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
-                                .addComponent(ftfData, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(tfData, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(185, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -117,7 +129,7 @@ public class NovoDoc extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ftfData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
@@ -141,6 +153,31 @@ public class NovoDoc extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Documento documento= new Documento();
+        documento.setNumero(Integer.parseInt(tfNumero.getText()));
+        documento.setData(tfData.getText());
+        documento.setTipo(cbTipoDoc.getSelectedItem().toString());
+        documento.setNome(tfAssunto.getText());
+        documento.setDescricao(taDescricao.getText());
+        
+        DocumentoBO bo = new DocumentoBO();
+        try{
+            bo.inserir(documento);
+        }catch(NegocioException ex){
+            if (ex.getCause() != null){
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Alerta", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -158,20 +195,21 @@ public class NovoDoc extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NovoDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NovoDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NovoDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NovoDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                NovoDoc dialog = new NovoDoc(new javax.swing.JFrame(), true);
+                JDialogDocumento dialog = new JDialogDocumento(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -185,7 +223,6 @@ public class NovoDoc extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbTipoDoc;
-    private javax.swing.JFormattedTextField ftfData;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -197,6 +234,7 @@ public class NovoDoc extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea taDescricao;
     private javax.swing.JTextField tfAssunto;
+    private javax.swing.JTextField tfData;
     private javax.swing.JTextField tfNumero;
     // End of variables declaration//GEN-END:variables
 }
