@@ -9,7 +9,7 @@ public class Documento {
     private int numero;
     private String nome;
     private String tipo;
-    private int data;
+    private String data;
     private String descricao;
 
     public int getNumero() {
@@ -36,11 +36,11 @@ public class Documento {
         this.tipo = tipo;
     }
 
-    public int getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(String data) {
         this.data = data;
     }
 
