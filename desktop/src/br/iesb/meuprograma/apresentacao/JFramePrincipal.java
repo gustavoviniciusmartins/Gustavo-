@@ -26,7 +26,11 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItemDocumento = new javax.swing.JMenuItem();
         jMenuItemMeta = new javax.swing.JMenuItem();
+<<<<<<< HEAD
         miCadDisciplina = new javax.swing.JMenuItem();
+=======
+        miCadastroCurso = new javax.swing.JMenuItem();
+>>>>>>> f59de69376cae04accbe7e6c6a9e4a0a933849b5
         jMenuAnalise = new javax.swing.JMenu();
         jMenuItemAnaliseDoc = new javax.swing.JMenuItem();
         jMenuItemGerarRel = new javax.swing.JMenuItem();
@@ -80,6 +84,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         });
         jMenuCadastro.add(jMenuItemMeta);
 
+<<<<<<< HEAD
         miCadDisciplina.setMnemonic('i');
         miCadDisciplina.setText("Cadastro de Disciplina");
         miCadDisciplina.addActionListener(new java.awt.event.ActionListener() {
@@ -88,6 +93,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastro.add(miCadDisciplina);
+=======
+        miCadastroCurso.setText("Cadastro de Curso");
+        miCadastroCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadastroCursoActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(miCadastroCurso);
+>>>>>>> f59de69376cae04accbe7e6c6a9e4a0a933849b5
 
         jMenuBarPrincipal.add(jMenuCadastro);
 
@@ -178,10 +192,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
        dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+<<<<<<< HEAD
     private void miCadDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadDisciplinaActionPerformed
         JDialogCadDisciplina dialogo = new JDialogCadDisciplina(this, true);
         dialogo.setVisible(true);
     }//GEN-LAST:event_miCadDisciplinaActionPerformed
+=======
+    private void miCadastroCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadastroCursoActionPerformed
+        JDialogoCadastroCurso dialogo = new JDialogoCadastroCurso (this, true);
+        dialogo.setVisible(true);
+    }//GEN-LAST:event_miCadastroCursoActionPerformed
+>>>>>>> f59de69376cae04accbe7e6c6a9e4a0a933849b5
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenuAjuda;
@@ -196,6 +217,10 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenu jMenuSistema;
+<<<<<<< HEAD
     private javax.swing.JMenuItem miCadDisciplina;
+=======
+    private javax.swing.JMenuItem miCadastroCurso;
+>>>>>>> f59de69376cae04accbe7e6c6a9e4a0a933849b5
     // End of variables declaration//GEN-END:variables
 }
