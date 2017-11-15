@@ -18,8 +18,8 @@ public class CadProfessorDAO implements DAO<CadProfessor>{
     @Override
     public void inserir(CadProfessor entidade) throws DadosException {
             Connection conexao = ConexaoBD.getConexao();
-            String sql = "INSERT INTO tb_professor (matricula, nome, email, "
-                    + "telefone, senha) VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO tb_professor (id_matricula, tx_nome, tx_email, "
+                    + "tx_telefone, tx_senha) VALUES (?,?,?,?,?)";
             
         try {
             PreparedStatement comando = conexao.prepareStatement(sql);
@@ -39,8 +39,8 @@ public class CadProfessorDAO implements DAO<CadProfessor>{
     @Override
     public void alterar(CadProfessor entidade) throws DadosException {
                         Connection conexao = ConexaoBD.getConexao();
-            String sql = "UPDATE tb_professor SET email=?, telefone=?, "
-                    + "senha=? WHERE matricula=?";
+            String sql = "UPDATE tb_professor SET tx_email=?, tx_telefone=?, "
+                    + "tx_senha=? WHERE tx_matricula=?";
             
         try {
             PreparedStatement comando = conexao.prepareStatement(sql);
@@ -59,7 +59,7 @@ public class CadProfessorDAO implements DAO<CadProfessor>{
     @Override
     public void excluir(CadProfessor entidade) throws DadosException {
             Connection conexao = ConexaoBD.getConexao();
-            String sql = "DELETE FROM tb_professor WHERE matricula=?";
+            String sql = "DELETE FROM tb_professor WHERE id_matricula=?";
             
         try {
             PreparedStatement comando = conexao.prepareStatement(sql);
@@ -75,7 +75,7 @@ public class CadProfessorDAO implements DAO<CadProfessor>{
     @Override
     public CadProfessor consultar(int id) throws DadosException {
             Connection conexao = ConexaoBD.getConexao();
-            String sql = "SELECT * FROM tb_professor WHERE matricula =?";
+            String sql = "SELECT * FROM tb_professor WHERE id_matricula =?";
             CadProfessor cadprofessor = new CadProfessor();
         try {
             PreparedStatement comando = conexao.prepareStatement(sql);

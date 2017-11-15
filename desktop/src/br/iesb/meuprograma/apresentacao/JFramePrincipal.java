@@ -26,6 +26,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItemDocumento = new javax.swing.JMenuItem();
         jMenuItemMeta = new javax.swing.JMenuItem();
+        miCadDisciplina = new javax.swing.JMenuItem();
         jMenuAnalise = new javax.swing.JMenu();
         jMenuItemAnaliseDoc = new javax.swing.JMenuItem();
         jMenuItemGerarRel = new javax.swing.JMenuItem();
@@ -52,6 +53,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuCadastro.setMnemonic('C');
         jMenuCadastro.setText("Cadastro");
 
+        jMenuItem1.setMnemonic('P');
         jMenuItem1.setText("Cadastro de Professor");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +79,15 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastro.add(jMenuItemMeta);
+
+        miCadDisciplina.setMnemonic('i');
+        miCadDisciplina.setText("Cadastro de Disciplina");
+        miCadDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miCadDisciplinaActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(miCadDisciplina);
 
         jMenuBarPrincipal.add(jMenuCadastro);
 
@@ -148,12 +159,12 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
 
     private void jMenuItemGerarRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerarRelActionPerformed
-        GerarRelatorio dialog = new GerarRelatorio(new javax.swing.JFrame(), true);
+        JDialogRelatorio dialog = new JDialogRelatorio(new javax.swing.JFrame(), true);
         dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemGerarRelActionPerformed
 
     private void jMenuItemAnaliseDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAnaliseDocActionPerformed
-        AnaliseDocumento dialog = new AnaliseDocumento(new javax.swing.JFrame(), true);
+        JDialogAnaliseDoc dialog = new JDialogAnaliseDoc(new javax.swing.JFrame(), true);
         dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemAnaliseDocActionPerformed
 
@@ -163,9 +174,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemMetaActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-       JDialogCadastroProfessor dialogo = new JDialogCadastroProfessor (this, true);
+       JDialogCadProfessor dialogo = new JDialogCadProfessor (this, true);
        dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void miCadDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miCadDisciplinaActionPerformed
+        JDialogCadDisciplina dialogo = new JDialogCadDisciplina(this, true);
+        dialogo.setVisible(true);
+    }//GEN-LAST:event_miCadDisciplinaActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenuAjuda;
@@ -180,5 +196,6 @@ public class JFramePrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemSair;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenu jMenuSistema;
+    private javax.swing.JMenuItem miCadDisciplina;
     // End of variables declaration//GEN-END:variables
 }

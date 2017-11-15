@@ -9,12 +9,12 @@ package br.iesb.meuprograma.apresentacao;
  *
  * @author kscka
  */
-public class GerarRelatorio extends javax.swing.JDialog {
+public class JDialogRelatorio extends javax.swing.JDialog {
 
     /**
      * Creates new form GerarRelatorio
      */
-    public GerarRelatorio(java.awt.Frame parent, boolean modal) {
+    public JDialogRelatorio(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
@@ -138,9 +138,7 @@ public class GerarRelatorio extends javax.swing.JDialog {
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         
-        BotaoActionListener ouvinte = new BotaoActionListener ();
-        btnImprimir.addActionListener(ouvinte);
-        
+                
     }//GEN-LAST:event_btnImprimirActionPerformed
 
     /**
@@ -160,20 +158,21 @@ public class GerarRelatorio extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GerarRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GerarRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GerarRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GerarRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                GerarRelatorio dialog = new GerarRelatorio(new javax.swing.JFrame(), true);
+                JDialogRelatorio dialog = new JDialogRelatorio(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

@@ -23,9 +23,9 @@ public class CadProfessorBO implements BO<CadProfessor> {
             if (entidade.getNome().isEmpty()){
                 throw new NegocioException ("O Campo Nome é obrigatório.");
             }
-           /* if (entidade.getSenha().isEmpty()){
+         /*  if (entidade.getSenha().isEmpty()){
                 throw new NegocioException ("O Campo Senha é obrigatório.");
-            }*/
+           }*/
     }
 
     @Override
