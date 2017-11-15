@@ -23,6 +23,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuSistema = new javax.swing.JMenu();
         jMenuItemSair = new javax.swing.JMenuItem();
         jMenuCadastro = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItemDocumento = new javax.swing.JMenuItem();
         jMenuItemMeta = new javax.swing.JMenuItem();
         jMenuAnalise = new javax.swing.JMenu();
@@ -50,6 +51,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
         jMenuCadastro.setMnemonic('C');
         jMenuCadastro.setText("Cadastro");
+
+        jMenuItem1.setText("Cadastro de Professor");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItem1);
 
         jMenuItemDocumento.setMnemonic('D');
         jMenuItemDocumento.setText("Novo Documento");
@@ -153,11 +162,17 @@ public class JFramePrincipal extends javax.swing.JFrame {
        dialogo.setVisible(true);
     }//GEN-LAST:event_jMenuItemMetaActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+       JDialogCadastroProfessor dialogo = new JDialogCadastroProfessor (this, true);
+       dialogo.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenu jMenuAnalise;
     private javax.swing.JMenuBar jMenuBarPrincipal;
     private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemAnaliseDoc;
     private javax.swing.JMenuItem jMenuItemDocumento;
     private javax.swing.JMenuItem jMenuItemGerarRel;

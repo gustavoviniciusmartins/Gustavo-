@@ -18,7 +18,8 @@ public class GerarRelatorio extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
-    }
+        
+       }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,7 +30,7 @@ public class GerarRelatorio extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        btnSair = new javax.swing.JButton();
         lblTitulo = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         lblTipoDoc = new javax.swing.JLabel();
@@ -41,10 +42,10 @@ public class GerarRelatorio extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Relatório");
 
-        jButton1.setText("Sair");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnSair.setText("Sair");
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnSairActionPerformed(evt);
             }
         });
 
@@ -103,7 +104,7 @@ public class GerarRelatorio extends javax.swing.JDialog {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnImprimir)
                 .addGap(45, 45, 45)
-                .addComponent(jButton1)
+                .addComponent(btnSair)
                 .addGap(166, 166, 166))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -123,7 +124,7 @@ public class GerarRelatorio extends javax.swing.JDialog {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnSair)
                     .addComponent(btnImprimir))
                 .addGap(16, 16, 16))
         );
@@ -131,9 +132,9 @@ public class GerarRelatorio extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         
@@ -186,7 +187,7 @@ public class GerarRelatorio extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnImprimir;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnSair;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblQtdDefinida;
