@@ -64,6 +64,12 @@ public class JDialogCadDisciplina extends javax.swing.JDialog {
 
         jLabel5.setText("Carga Horária: ");
 
+        tfCargaHora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfCargaHoraActionPerformed(evt);
+            }
+        });
+
         btnSalvar.setText("Salvar");
         btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +187,10 @@ public class JDialogCadDisciplina extends javax.swing.JDialog {
             }
         }*/
     }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void tfCargaHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCargaHoraActionPerformed
+    tfCargaHora.setToolTipText("Valores: 30, 60, 90, 120");
+    }//GEN-LAST:event_tfCargaHoraActionPerformed
 
     /**
      * @param args the command line arguments
