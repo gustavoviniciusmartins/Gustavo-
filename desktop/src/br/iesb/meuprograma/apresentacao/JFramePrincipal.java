@@ -79,6 +79,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         });
         jMenuCadastro.add(jMenuItemMeta);
 
+        miCadastroCurso.setMnemonic('C');
         miCadastroCurso.setText("Cadastro de Curso");
         miCadastroCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -27,118 +27,129 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblNomeCurso" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblHabilitacao" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="tfHabilitacao" min="-2" pref="200" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="514" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="tfNomeCurso" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblNomeCC" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblNomeCC1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblTitulacao" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="cbNome" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="tfCPF" pref="266" max="32767" attributes="0"/>
+                                  <Component id="tfTitulacao" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="btnSalvar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnLimpar" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnAlterar" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblTempo" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Component id="tfTempo" min="-2" pref="204" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="lblCoordenador" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Component id="lblTipoCurso" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="tfTipoCurso" min="-2" pref="200" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lblLocalOferta" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="tfLocalOferta" min="-2" pref="255" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="lblModalidade" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="tfModalidade" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblPeriodo" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="tfPeriodo" min="-2" pref="276" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblNumVagas" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="tfNumVagas" min="-2" pref="157" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblNomeCurso" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblHabilitacao" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="lblEstrutura" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblTurno" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="tfTurno" min="-2" pref="126" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="tfHabilitacao" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="514" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="tfNomeCurso" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblNomeCC" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblNomeCC1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblTitulacao" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cbNome" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="tfCPF" pref="266" max="32767" attributes="0"/>
-                                          <Component id="tfTitulacao" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="lblCarga" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="btnSalvar" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="btnLimpar" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="btnAlterar" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" attributes="0">
-                                              <Component id="lblTempo" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                              <Component id="tfTempo" min="-2" pref="204" max="-2" attributes="0"/>
-                                          </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="lblRegime" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="tfRegime" max="32767" attributes="0"/>
+                                      <Component id="tfCarga" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="lblCoordenador" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="lblEstrutura" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="lblTurno" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="tfTurno" min="-2" pref="126" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="lblLocalOferta" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="tfLocalOferta" min="-2" pref="255" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lblNumVagas" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="tfNumVagas" min="-2" pref="157" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="lblModalidade" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                          <Component id="tfModalidade" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lblPeriodo" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="43" max="32767" attributes="0"/>
+                                          <Component id="tfPeriodo" min="-2" pref="276" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="lblCarga" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lblRegime" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="tfRegime" max="32767" attributes="0"/>
-                                  <Component id="tfCarga" max="32767" attributes="0"/>
-                              </Group>
+                              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+                              <Component id="lblCodCurso" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                              <Component id="tfCodCurso" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -149,8 +160,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="tfTipoCurso" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tfModalidade" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblModalidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCodCurso" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tfCodCurso" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="lblTipoCurso" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -163,22 +174,35 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lblHabilitacao" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="tfHabilitacao" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblLocalOferta" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfLocalOferta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfModalidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblModalidade" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblTurno" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfTurno" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblNumVagas" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfNumVagas" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblTurno" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfTurno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblCarga" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfCarga" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblLocalOferta" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfLocalOferta" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="lblNumVagas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfNumVagas" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblCarga" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="tfCarga" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="lblEstrutura" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -361,6 +385,13 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCodCurso">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C&#xf3;digo do Curso: "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfCodCurso">
     </Component>
   </SubComponents>
 </Form>
