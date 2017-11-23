@@ -19,7 +19,7 @@ public class CadProfessorDAO implements DAO<CadProfessor>{
     public void inserir(CadProfessor entidade) throws DadosException {
             Connection conexao = ConexaoBD.getConexao();
             String sql = "INSERT INTO tb_professor (id_matricula, tx_nome, tx_email, "
-                    + "tx_telefone, tx_senha) VALUES (?,?,?,?,?)";
+                    + "tx_telefone, tx_senha) VALUES (?,?,?,?,?,?)";
             
         try {
             PreparedStatement comando = conexao.prepareStatement(sql);

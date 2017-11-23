@@ -13,9 +13,9 @@ public class CadDisciplina {
     private String nome;
     private String descricao;
     private String tipo;
-    private int codigo;
-    private int semestre;
-    private int cargaHora;
+    private String codigo;
+    private String semestre;
+    private String cargaHora;
 
     public String getNome() {
         return nome;
@@ -41,27 +41,27 @@ public class CadDisciplina {
         this.tipo = tipo;
     }
 
-    public int getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
-    public int getSemestre() {
+    public String getSemestre() {
         return semestre;
     }
 
-    public void setSemestre(int semestre) {
+    public void setSemestre(String semestre) {
         this.semestre = semestre;
     }
 
-    public int getCargaHora() {
+    public String getCargaHora() {
         return cargaHora;
     }
 
-    public void setCargaHora(int cargaHora) {
+    public void setCargaHora(String cargaHora) {
         this.cargaHora = cargaHora;
     }
     
