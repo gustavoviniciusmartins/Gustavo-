@@ -14,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author kscka
  */
-public class JDialogCadastroProfessor extends javax.swing.JDialog {
+public class JDialogCadProfessor extends javax.swing.JDialog {
 
     /**
      * Creates new form JDialogCadastroProfessor
      */
-    public JDialogCadastroProfessor(java.awt.Frame parent, boolean modal) {
+    public JDialogCadProfessor(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -159,6 +159,7 @@ public class JDialogCadastroProfessor extends javax.swing.JDialog {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         CadProfessor cadprofessor = new CadProfessor();
+      
         cadprofessor.setMatricula(Integer.parseInt(TFMatricula.getText()));
         cadprofessor.setNome(TFNome.getText());
         cadprofessor.setEmail(TFEmail.getText());
@@ -166,6 +167,7 @@ public class JDialogCadastroProfessor extends javax.swing.JDialog {
         cadprofessor.setSenha(PFSenha.getName());
         
         CadProfessorBO bo = new CadProfessorBO();
+        
         try{
             bo.inserir(cadprofessor);
         } catch (NegocioException ex){
@@ -199,20 +201,23 @@ public class JDialogCadastroProfessor extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JDialogCadastroProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogCadProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JDialogCadastroProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogCadProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JDialogCadastroProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogCadProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JDialogCadastroProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogCadProfessor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                JDialogCadastroProfessor dialog = new JDialogCadastroProfessor(new javax.swing.JFrame(), true);
+                JDialogCadProfessor dialog = new JDialogCadProfessor(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

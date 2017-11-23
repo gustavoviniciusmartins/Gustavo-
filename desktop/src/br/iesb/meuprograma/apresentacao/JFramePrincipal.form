@@ -29,6 +29,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
+                <Property name="mnemonic" type="int" value="80"/>
                 <Property name="text" type="java.lang.String" value="Cadastro de Professor"/>
               </Properties>
               <Events>
@@ -53,6 +54,15 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemMetaActionPerformed"/>
               </Events>
             </MenuItem>
+<<<<<<< HEAD
+            <MenuItem class="javax.swing.JMenuItem" name="miCadDisciplina">
+              <Properties>
+                <Property name="mnemonic" type="int" value="105"/>
+                <Property name="text" type="java.lang.String" value="Cadastro de Disciplina"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadDisciplinaActionPerformed"/>
+=======
             <MenuItem class="javax.swing.JMenuItem" name="miCadastroCurso">
               <Properties>
                 <Property name="mnemonic" type="int" value="67"/>
@@ -60,6 +70,7 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadastroCursoActionPerformed"/>
+>>>>>>> f59de69376cae04accbe7e6c6a9e4a0a933849b5
               </Events>
             </MenuItem>
           </SubComponents>

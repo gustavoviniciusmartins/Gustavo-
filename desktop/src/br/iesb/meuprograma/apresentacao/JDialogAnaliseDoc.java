@@ -11,12 +11,12 @@ import java.awt.event.ActionListener;
  *
  * @author kscka
  */
-public class AnaliseDocumento extends javax.swing.JDialog {
+public class JDialogAnaliseDoc extends javax.swing.JDialog {
 
     /**
      * Creates new form AnaliseDocumento
      */
-    public AnaliseDocumento(java.awt.Frame parent, boolean modal) {
+    public JDialogAnaliseDoc(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(null);
@@ -141,13 +141,11 @@ public class AnaliseDocumento extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAceiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceiteActionPerformed
-       BotaoAceiteActionListener aceite = new BotaoAceiteActionListener ();
-        btnAceite.addActionListener((ActionListener) aceite);
+      
     }//GEN-LAST:event_btnAceiteActionPerformed
 
     private void btnRecusaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecusaActionPerformed
-       BotaoRecusaActionListener recusa = new BotaoRecusaActionListener ();
-        btnRecusa.addActionListener((ActionListener) recusa);
+       
     }//GEN-LAST:event_btnRecusaActionPerformed
 
     /**
@@ -167,20 +165,21 @@ public class AnaliseDocumento extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AnaliseDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogAnaliseDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AnaliseDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogAnaliseDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AnaliseDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogAnaliseDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AnaliseDocumento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JDialogAnaliseDoc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                AnaliseDocumento dialog = new AnaliseDocumento(new javax.swing.JFrame(), true);
+                JDialogAnaliseDoc dialog = new JDialogAnaliseDoc(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
