@@ -4,11 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/dados/CadDisciplinaDAO.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/apresentacao/JFramePrincipal.java</file>
             <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/negocio/CadProfessorBO.java</file>
             <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/apresentacao/JDialogCadDisciplina.java</file>
             <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/negocio/CadDisciplinaBO.java</file>
             <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/dados/CadDisciplina.java</file>
-            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/Principal.java</file>
+            <file>file:/D:/Karine/Documents/GitHub/eadtime6/desktop/src/br/iesb/meuprograma/apresentacao/JDialogCadProfessor.java</file>
         </group>
     </open-files>
 </project-private>

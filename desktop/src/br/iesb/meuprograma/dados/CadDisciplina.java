@@ -13,7 +13,7 @@ public class CadDisciplina {
     private String nome;
     private String descricao;
     private String tipo;
-    private String codigo;
+    private int codigo;
     private String semestre;
     private String cargaHora;
 
@@ -41,11 +41,11 @@ public class CadDisciplina {
         this.tipo = tipo;
     }
 
-    public String getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

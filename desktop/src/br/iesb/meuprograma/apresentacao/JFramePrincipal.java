@@ -24,6 +24,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuItemSair = new javax.swing.JMenuItem();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemDocumento = new javax.swing.JMenuItem();
+        MenuItemProfessor = new javax.swing.JMenuItem();
+        MenuItemDisciplina = new javax.swing.JMenuItem();
         jMenuItemMeta = new javax.swing.JMenuItem();
         jMenuAnalise = new javax.swing.JMenu();
         jMenuItemAnaliseDoc = new javax.swing.JMenuItem();
@@ -59,6 +61,22 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastro.add(jMenuItemDocumento);
+
+        MenuItemProfessor.setText("Professor");
+        MenuItemProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemProfessorActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(MenuItemProfessor);
+
+        MenuItemDisciplina.setText("Disciplina");
+        MenuItemDisciplina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemDisciplinaActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(MenuItemDisciplina);
 
         jMenuItemMeta.setMnemonic('M');
         jMenuItemMeta.setText("Meta");
@@ -125,7 +143,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSobreActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
-        System.exit(0);
+        dispose(); 
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDocumentoActionPerformed
@@ -133,16 +151,28 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
 
     private void jMenuItemGerarRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerarRelActionPerformed
-        GerarRelatorio dialog = new GerarRelatorio(new javax.swing.JFrame(), true);
+        JDialogRelatorio dialog = new JDialogRelatorio(new javax.swing.JFrame(), true);
         dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemGerarRelActionPerformed
 
     private void jMenuItemAnaliseDocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAnaliseDocActionPerformed
-        AnaliseDocumento dialog = new AnaliseDocumento(new javax.swing.JFrame(), true);
+        JDialogAnaliseDoc dialog = new JDialogAnaliseDoc(new javax.swing.JFrame(), true);
         dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemAnaliseDocActionPerformed
 
+    private void MenuItemProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemProfessorActionPerformed
+        JDialogCadProfessor dialog = new JDialogCadProfessor(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_MenuItemProfessorActionPerformed
+
+    private void MenuItemDisciplinaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemDisciplinaActionPerformed
+      JDialogCadDisciplina dialog = new JDialogCadDisciplina(new javax.swing.JFrame(), true);
+      dialog.setVisible(true);
+    }//GEN-LAST:event_MenuItemDisciplinaActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem MenuItemDisciplina;
+    private javax.swing.JMenuItem MenuItemProfessor;
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenu jMenuAnalise;
     private javax.swing.JMenuBar jMenuBarPrincipal;
