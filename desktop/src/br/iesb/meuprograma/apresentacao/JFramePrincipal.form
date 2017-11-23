@@ -27,19 +27,10 @@
             <Property name="text" type="java.lang.String" value="Cadastro"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
-              <Properties>
-                <Property name="mnemonic" type="int" value="80"/>
-                <Property name="text" type="java.lang.String" value="Cadastro de Professor"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
-              </Events>
-            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemDocumento">
               <Properties>
                 <Property name="mnemonic" type="int" value="68"/>
-                <Property name="text" type="java.lang.String" value="Novo Documento"/>
+                <Property name="text" type="java.lang.String" value="Documento"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemDocumentoActionPerformed"/>
@@ -48,30 +39,8 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItemMeta">
               <Properties>
                 <Property name="mnemonic" type="int" value="77"/>
-                <Property name="text" type="java.lang.String" value="Cadastro de Meta"/>
+                <Property name="text" type="java.lang.String" value="Meta"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItemMetaActionPerformed"/>
-              </Events>
-            </MenuItem>
-<<<<<<< HEAD
-            <MenuItem class="javax.swing.JMenuItem" name="miCadDisciplina">
-              <Properties>
-                <Property name="mnemonic" type="int" value="105"/>
-                <Property name="text" type="java.lang.String" value="Cadastro de Disciplina"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadDisciplinaActionPerformed"/>
-=======
-            <MenuItem class="javax.swing.JMenuItem" name="miCadastroCurso">
-              <Properties>
-                <Property name="mnemonic" type="int" value="67"/>
-                <Property name="text" type="java.lang.String" value="Cadastro de Curso"/>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miCadastroCursoActionPerformed"/>
->>>>>>> f59de69376cae04accbe7e6c6a9e4a0a933849b5
-              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
