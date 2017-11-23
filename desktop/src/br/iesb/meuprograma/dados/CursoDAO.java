@@ -26,7 +26,7 @@ public class CursoDAO implements DAO<Curso> {
         
         try {
             PreparedStatement comando= conexao.prepareStatement (sql);
-            comando.setString(1, entidade.getCodCurso());
+            comando.setInt(1, entidade.getCodCurso());
             comando.setString(2, entidade.getTipo());
             comando.setString(3, entidade.getModalidade());
             comando.setString(4, entidade.getNome());
@@ -52,7 +52,7 @@ public class CursoDAO implements DAO<Curso> {
         
         try {
             PreparedStatement comando= conexao.prepareStatement (sql);
-            comando.setString(1, entidade.getCodCurso());
+            comando.setInt(1, entidade.getCodCurso());
             comando.setString(2, entidade.getTipo());
             comando.setString(3, entidade.getModalidade());
             comando.setString(4, entidade.getNome());
@@ -78,7 +78,7 @@ public class CursoDAO implements DAO<Curso> {
         
         try {
             PreparedStatement comando= conexao.prepareStatement (sql);
-            comando.setString(1, entidade.getCodCurso());
+            comando.setInt(1, entidade.getCodCurso());
             comando.executeUpdate();
             conexao.close();
         } catch (SQLException ex) {
@@ -88,16 +88,16 @@ public class CursoDAO implements DAO<Curso> {
 
     @Override
     public Curso consultar(int id) throws DadosException {
-Connection conexao = ConexaoBD.getConexao();
-            String sql = "SELECT * FROM tb_curso WHERE codCurso =?";
-            Curso curso = new Curso();
+        Connection conexao = ConexaoBD.getConexao();
+        String sql = "SELECT * FROM tb_curso WHERE codCurso =?";
+        Curso curso = new Curso();
         try {
             PreparedStatement comando = conexao.prepareStatement(sql);
             comando.setInt(1,id);
             ResultSet resultado = comando.executeQuery();
             if (resultado.next()){
                     
-                    curso.setCodCurso(resultado.getString(1));
+                    curso.setCodCurso(resultado.getInt(1));
                     curso.setTipo(resultado.getString(2));
                     curso.setModalidade(resultado.getString(3));
                     curso.setNome(resultado.getString(4));
@@ -127,7 +127,7 @@ Connection conexao = ConexaoBD.getConexao();
             ResultSet resultado= comando.executeQuery(sql);
             while(resultado.next()){
                 Curso curso= new Curso();
-                curso.setCodCurso(resultado.getString(1));
+                curso.setCodCurso(resultado.getInt(1));
                 curso.setTipo(resultado.getString(2));
                 curso.setModalidade(resultado.getString(3));
                 curso.setNome(resultado.getString(4));
