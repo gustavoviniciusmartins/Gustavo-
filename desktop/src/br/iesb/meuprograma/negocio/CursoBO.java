@@ -6,6 +6,9 @@
 package br.iesb.meuprograma.negocio;
 
 import br.iesb.meuprograma.dados.Curso;
+import br.iesb.meuprograma.dados.DadosException;
+import br.iesb.meuprograma.dados.CursoDAO;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,27 +29,69 @@ public class CursoBO implements BO<Curso> {
 
     @Override
     public void inserir(Curso entidade) throws NegocioException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        CursoDAO dao= new CursoDAO();
+        try {
+            dao.inserir(entidade);
+        } catch (DadosException ex) {
+            throw new NegocioException("Erro ao incluir", ex);
+        }
     }
 
     @Override
     public void alterar(Curso entidade) throws NegocioException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        consultar(entidade.getCodCurso());
+        validar(entidade);
+        CursoDAO dao= new CursoDAO();
+        
+        try {
+            dao.alterar(entidade);
+        } catch (DadosException ex) {
+            throw new NegocioException("Erro ao alterar", ex);
+        }
+        
     }
 
     @Override
     public void excluir(Curso entidade) throws NegocioException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        consultar(entidade.getCodCurso());
+        CursoDAO dao= new CursoDAO();
+        
+        try {
+            dao.excluir(entidade);
+        } catch (DadosException ex) {
+            throw new NegocioException("Erro ao excluir", ex);
+        }
     }
 
     @Override
     public Curso consultar(int id) throws NegocioException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Curso curso= new Curso();
+        CursoDAO dao= new CursoDAO();        
+        try {
+            curso= dao.consultar(id);
+            if (curso.getCodCurso()==0){
+                throw new NegocioException("Documento não encontrado");
+            }
+        } catch (DadosException ex) {
+            throw new NegocioException ("Erro ao consultar", ex);
+        }
+        return curso;
     }
 
     @Override
     public List<Curso> listar() throws NegocioException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Curso> lista= new ArrayList<Curso>();
+        CursoDAO dao= new CursoDAO();
+        
+        try {
+            lista= dao.listar();
+            if (lista.isEmpty()){
+                throw new NegocioException("Nenhum documento cadastrado!");
+            }            
+        } catch (DadosException ex) {
+            throw new NegocioException ("Erro ao listar", ex);
+        }
+        return lista;
     }
     
 }
