@@ -5,7 +5,9 @@
  */
 package br.iesb.meuprograma.apresentacao;
 
+import br.iesb.meuprograma.dados.CadDisciplina;
 import br.iesb.meuprograma.dados.CadProfessor;
+import br.iesb.meuprograma.negocio.CadDisciplinaBO;
 import br.iesb.meuprograma.negocio.CadProfessorBO;
 import br.iesb.meuprograma.negocio.NegocioException;
 import javax.swing.JOptionPane;
@@ -166,14 +168,14 @@ public class JDialogCadDisciplina extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-      /* CadDisciplina caddisciplina = new CadDisciplina();
+        CadDisciplina caddisciplina = new CadDisciplina();
       
-        caddisciplina.setNome(tfNome.getText);
-        caddisciplina.setDescricao(tfDescricao.getText());
-        caddisciplina.setTipo(cbTipo.getText());
+        caddisciplina.setNome(tfNome.getText());
+        caddisciplina.setDescricao(TFDescricao.getText());
+        caddisciplina.setTipo(cbTipo.getActionCommand());
         caddisciplina.setCodigo(Integer.parseInt(tfCodigo.getText()));
-        caddisciplina.setSemestre(Integer.parseInt(tfSemestre.getText()));
-        caddisciplina.setCargaHora(Integer.parseInt(tfCargaHora.getText()));
+        caddisciplina.setSemestre(tfSemestre.getText());
+        caddisciplina.setCargaHora(tfCargaHora.getText());
         
         CadDisciplinaBO bo = new CadDisciplinaBO();
         
@@ -185,7 +187,7 @@ public class JDialogCadDisciplina extends javax.swing.JDialog {
             } else {
                 JOptionPane.showMessageDialog(this, ex.getMessage(), "Alerta", JOptionPane.WARNING_MESSAGE);
             }
-        }*/
+        }
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void tfCargaHoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCargaHoraActionPerformed

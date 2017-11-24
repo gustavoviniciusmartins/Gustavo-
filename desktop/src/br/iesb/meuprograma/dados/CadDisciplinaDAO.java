@@ -29,7 +29,7 @@ public class CadDisciplinaDAO implements DAO<CadDisciplina>{
             comando.setString(1,entidade.getNome());
             comando.setString(2,entidade.getDescricao());
             comando.setString(3,entidade.getTipo());
-            comando.setString(4,entidade.getCodigo());
+            comando.setInt(4,entidade.getCodigo());
             comando.setString(5,entidade.getSemestre());
             comando.setString(6,entidade.getCargaHora());
             comando.executeUpdate();   
@@ -52,7 +52,7 @@ public class CadDisciplinaDAO implements DAO<CadDisciplina>{
             comando.setString(3,entidade.getTipo());
             comando.setString(4,entidade.getSemestre());
             comando.setString(5,entidade.getCargaHora());
-            comando.setString(6,entidade.getCodigo());
+            comando.setInt(6,entidade.getCodigo());
             comando.executeUpdate();   
             conexao.close();
         } catch (SQLException ex) {
@@ -68,7 +68,7 @@ public class CadDisciplinaDAO implements DAO<CadDisciplina>{
             
         try {
             PreparedStatement comando = conexao.prepareStatement(sql);
-            comando.setString(1,entidade.getCodigo());
+            comando.setInt(1,entidade.getCodigo());
             comando.executeUpdate();   
             conexao.close();
         } catch (SQLException ex) {
@@ -92,7 +92,7 @@ public class CadDisciplinaDAO implements DAO<CadDisciplina>{
                     caddisciplina.setTipo(resultado.getString(3));
                     caddisciplina.setSemestre(resultado.getString(4));
                     caddisciplina.setCargaHora(resultado.getString(5));
-                    caddisciplina.setCodigo(resultado.getString(6));
+                    caddisciplina.setCodigo(resultado.getInt(6));
             }
             conexao.close();
         } catch (SQLException ex) {
@@ -115,7 +115,7 @@ public class CadDisciplinaDAO implements DAO<CadDisciplina>{
                 caddisciplina.setNome(resultado.getString(1));
                     caddisciplina.setDescricao(resultado.getString(2));
                     caddisciplina.setTipo(resultado.getString(3));
-                    caddisciplina.setCodigo(resultado.getString(4));
+                    caddisciplina.setCodigo(resultado.getInt(4));
                     caddisciplina.setSemestre(resultado.getString(5));
                     caddisciplina.setCargaHora(resultado.getString(6));
                     

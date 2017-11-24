@@ -119,5 +119,9 @@ public class CadProfessorDAO implements DAO<CadProfessor>{
         return lista;
         
     }
+
+    public void alterar(CadDisciplina entidade) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
