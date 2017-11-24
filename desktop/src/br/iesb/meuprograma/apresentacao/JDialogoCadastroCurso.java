@@ -5,6 +5,11 @@
  */
 package br.iesb.meuprograma.apresentacao;
 
+import br.iesb.meuprograma.dados.Curso;
+import br.iesb.meuprograma.negocio.CursoBO;
+import br.iesb.meuprograma.negocio.NegocioException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vimag
@@ -104,6 +109,11 @@ public class JDialogoCadastroCurso extends javax.swing.JDialog {
         lblTempo.setText("Tempo de Dedicação: ");
 
         btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         btnLimpar.setText("Limpar");
 
@@ -281,6 +291,34 @@ public class JDialogoCadastroCurso extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        Curso curso = new Curso();
+      
+        curso.setCodCurso(Integer.parseInt(tfCodCurso.getText()));
+        curso.setTipo(tfTipoCurso.getText());
+        curso.setModalidade(tfModalidade.getText());
+        curso.setNome(tfNomeCurso.getText());
+        curso.setHabilitacao(tfHabilitacao.getText());
+        curso.setLocaloferta(tfLocalOferta.getText());
+        curso.setTurno(tfTurno.getText());
+        curso.setNumvagas(Integer.parseInt(tfNumVagas.getText()));
+        curso.setCarga(tfCarga.getText());
+        curso.setRegime(tfRegime.getText());
+        curso.setPeriodo(tfPeriodo.getText());
+                
+        CursoBO bo = new CursoBO();
+        
+        try{
+            bo.inserir(curso);
+        } catch (NegocioException ex){
+            if (ex.getCause() != null){
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(this, ex.getMessage(), "Alerta", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
     /**
      * @param args the command line arguments

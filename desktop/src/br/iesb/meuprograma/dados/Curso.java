@@ -6,7 +6,7 @@ package br.iesb.meuprograma.dados;
  * @author vimag
  */
 public class Curso {
-    private String codCurso;
+    private int codCurso;
     private String tipo;
     private String modalidade;
     private String nome;
@@ -18,15 +18,14 @@ public class Curso {
     private String regime;
     private String periodo;
 
-    public String getCodCurso() {
+    public int getCodCurso() {
         return codCurso;
     }
 
-    public void setCodCurso(String codCurso) {
+    public void setCodCurso(int codCurso) {
         this.codCurso = codCurso;
     }
-    
-    
+       
     public String getTipo() {
         return tipo;
     }

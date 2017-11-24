@@ -24,6 +24,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
         jMenuItemSair = new javax.swing.JMenuItem();
         jMenuCadastro = new javax.swing.JMenu();
         jMenuItemDocumento = new javax.swing.JMenuItem();
+        MenuItemCurso = new javax.swing.JMenuItem();
         jMenuItemMeta = new javax.swing.JMenuItem();
         jMenuAnalise = new javax.swing.JMenu();
         jMenuItemAnaliseDoc = new javax.swing.JMenuItem();
@@ -59,6 +60,14 @@ public class JFramePrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastro.add(jMenuItemDocumento);
+
+        MenuItemCurso.setText("Curso");
+        MenuItemCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuItemCursoActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(MenuItemCurso);
 
         jMenuItemMeta.setMnemonic('M');
         jMenuItemMeta.setText("Meta");
@@ -129,7 +138,8 @@ public class JFramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDocumentoActionPerformed
-        // TODO add your handling code here:
+        JDialogDocumento dialog = new JDialogDocumento(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemDocumentoActionPerformed
 
     private void jMenuItemGerarRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerarRelActionPerformed
@@ -142,7 +152,13 @@ public class JFramePrincipal extends javax.swing.JFrame {
         dialog.setVisible(true);
     }//GEN-LAST:event_jMenuItemAnaliseDocActionPerformed
 
+    private void MenuItemCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCursoActionPerformed
+        JDialogoCadastroCurso dialog = new JDialogoCadastroCurso(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_MenuItemCursoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem MenuItemCurso;
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenu jMenuAnalise;
     private javax.swing.JMenuBar jMenuBarPrincipal;
